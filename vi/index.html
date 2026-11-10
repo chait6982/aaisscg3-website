@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AAI:SSCG-3 | AI tác nhân cho các ngành được quản lý chặt chẽ · Khu vực Châu Á - Thái Bình Dương (APAC)</title>
+<meta name="description" content="Chúng tôi thiết kế và triển khai các hệ thống đa tác nhân (multi-agent systems), quy trình truy xuất dữ liệu (RAG) và tự động hóa bằng AI cho các tổ chức đòi hỏi độ chính xác cao và khả năng kiểm chứng.">
+<link rel="canonical" href="https://aaisscg3.com/vi/">
+<link rel="alternate" hreflang="en" href="https://aaisscg3.com/">
+<link rel="alternate" hreflang="x-default" href="https://aaisscg3.com/">
+<link rel="alternate" hreflang="ja" href="https://aaisscg3.com/ja/">
+<link rel="alternate" hreflang="ko" href="https://aaisscg3.com/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://aaisscg3.com/zh-hans/">
+<link rel="alternate" hreflang="zh-SG" href="https://aaisscg3.com/zh-hans/">
+<link rel="alternate" hreflang="zh-MY" href="https://aaisscg3.com/zh-hans/">
+<link rel="alternate" hreflang="zh-Hant" href="https://aaisscg3.com/zh-hant/">
+<link rel="alternate" hreflang="zh-TW" href="https://aaisscg3.com/zh-hant/">
+<link rel="alternate" hreflang="zh-HK" href="https://aaisscg3.com/zh-hant/">
+<link rel="alternate" hreflang="yue" href="https://aaisscg3.com/yue/">
+<link rel="alternate" hreflang="th" href="https://aaisscg3.com/th/">
+<link rel="alternate" hreflang="vi" href="https://aaisscg3.com/vi/">
+<link rel="alternate" hreflang="fil" href="https://aaisscg3.com/fil/">
+<link rel="alternate" hreflang="tl" href="https://aaisscg3.com/fil/">
+<link rel="alternate" hreflang="de" href="https://aaisscg3.com/de/">
+<link rel="alternate" hreflang="fr" href="https://aaisscg3.com/fr/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AAI:SSCG-3">
+<meta property="og:title" content="AAI:SSCG-3 | AI tác nhân cho các ngành được quản lý chặt chẽ · Khu vực Châu Á - Thái Bình Dương (APAC)">
+<meta property="og:description" content="Chúng tôi thiết kế và triển khai các hệ thống đa tác nhân (multi-agent systems), quy trình truy xuất dữ liệu (RAG) và tự động hóa bằng AI cho các tổ chức đòi hỏi độ chính xác cao và khả năng kiểm chứng.">
+<meta property="og:url" content="https://aaisscg3.com/vi/">
+<meta property="og:image" content="https://aaisscg3.com/banner.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../bulb.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: brand-led dark single theme (matches the neon logo); logo banner opens the page, citation chips recur as the motif */
+:root{
+  --bg:#060A22; --surface:#0C1238; --surface-2:#111A4A; --ink:#EEF1FF; --muted:#A3ABD6; --line:#1F2A68;
+  --cyan:#2FD3F5; --magenta:#D84BF2; --violet:#6C5CFF;
+  --grad:linear-gradient(90deg,var(--cyan),var(--violet) 55%,var(--magenta));
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6;
+  background-image:radial-gradient(60rem 30rem at 85% -10%,rgba(108,92,255,.18),transparent 70%),radial-gradient(40rem 25rem at 0% 40%,rgba(47,211,245,.07),transparent 70%);background-repeat:no-repeat}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
+.wrap{max-width:72rem;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{font-family:var(--display);line-height:1.08;text-wrap:balance;margin:0}
+p{margin:0}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan)}
+.cite{display:inline-flex;align-items:center;font-family:var(--mono);font-size:.7rem;font-weight:500;
+  background:rgba(216,75,242,.16);color:#F0A6FF;border:1px solid rgba(216,75,242,.35);border-radius:4px;padding:0 .35rem;margin-left:.25rem;vertical-align:.15em;white-space:nowrap}
+
+/* nav */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(6,10,34,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.7rem}
+.brand{white-space:nowrap;display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:.02em}
+.brand img{height:40px;width:auto;flex:none;border-radius:6px}
+.brand .c{color:var(--magenta)}
+.nav ul{white-space:nowrap;display:flex;gap:1.5rem;list-style:none;margin:0;padding:0;font-size:.92rem}
+.nav ul a{text-decoration:none;color:var(--muted)}
+.nav ul a:hover{color:var(--ink)}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.95rem;text-decoration:none;
+  background:var(--grad);color:#fff;padding:.7rem 1.15rem;border-radius:999px;border:0;cursor:pointer;box-shadow:0 6px 24px -8px rgba(108,92,255,.7)}
+.btn:hover{filter:brightness(1.12)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.btn.ghost:hover{border-color:var(--cyan)}
+@media (max-width:1080px){.nav ul{display:none}}
+
+/* banner */
+.banner{padding-top:clamp(1.25rem,3vw,2rem)}
+.banner img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(108,92,255,.6)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:center;padding-block:clamp(2.5rem,6vw,4.5rem) clamp(3rem,6vw,5rem)}
+.hero>*{min-width:0}
+.hero h1{font-size:clamp(2.3rem,5.2vw,4rem);font-weight:800;letter-spacing:-.02em;margin-block:1rem 1.4rem}
+.lede{color:var(--muted);font-size:1.15rem;max-width:34rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.region{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.8rem;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.region span{border:1px solid var(--line);border-radius:999px;padding:.15rem .6rem}
+.based{margin-top:.8rem;font-size:.9rem;color:var(--muted)}
+
+/* trace card */
+.trace{background:var(--surface);border:1px solid var(--line);border-radius:12px;font-size:.92rem;margin:0;
+  box-shadow:0 0 0 1px rgba(47,211,245,.08),0 24px 50px -24px rgba(47,211,245,.35)}
+.trace-head{display:flex;justify-content:space-between;align-items:center;padding:.75rem 1rem;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.dot{display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);margin-right:.4rem}
+.trace-body{padding:1.1rem 1rem;display:grid;gap:.9rem}
+.q{font-weight:600}
+.srcs{display:grid;gap:.35rem;border-top:1px dashed var(--line);padding-top:.8rem;font-family:var(--mono);font-size:.74rem;color:var(--muted)}
+.srcs b{color:#F0A6FF;font-weight:500;margin-right:.4rem}
+.trace-foot{display:flex;gap:1rem;flex-wrap:wrap;padding:.7rem 1rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.trace-foot strong{color:var(--cyan);font-weight:500}
+@media (max-width:860px){.hero{grid-template-columns:1fr}}
+
+/* principles */
+.principles{border-block:1px solid var(--line);background:var(--surface)}
+.principles .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.principle{padding-block:2rem;padding-inline:0 2rem;min-width:0}
+.principle+.principle{border-left:1px solid var(--line);padding-left:2rem}
+.principle h3{font-size:1.2rem;margin-bottom:.5rem}
+.principle p{color:var(--muted);font-size:.97rem}
+@media (max-width:760px){.principles .wrap{grid-template-columns:1fr}.principle+.principle{border-left:0;border-top:1px solid var(--line);padding-left:0}}
+
+/* sections */
+section.block{padding-block:clamp(3.5rem,8vw,6rem)}
+.sec-head{display:grid;grid-template-columns:1fr 1.4fr;gap:2rem;align-items:end;margin-bottom:2.8rem}
+.sec-head h2{font-size:clamp(1.9rem,3.8vw,2.8rem);font-weight:700;letter-spacing:-.015em;margin-top:.6rem}
+.sec-head p{color:var(--muted);max-width:36rem}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr}}
+
+/* industries */
+.sectors{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.sector{background:var(--bg);padding:1.8rem;min-width:0}
+.sector h3{font-size:1.3rem;margin-bottom:1rem}
+.sector ul{margin:0;padding:0;list-style:none;display:grid;gap:.5rem}
+.sector li{padding-left:1.1rem;position:relative;color:var(--muted);font-size:.97rem}
+.sector li::before{content:"";position:absolute;left:0;top:.65em;width:.5rem;height:2px;background:var(--grad)}
+.sector .guard{margin-top:1.1rem;font-family:var(--mono);font-size:.74rem;color:var(--cyan)}
+@media (max-width:760px){.sectors{grid-template-columns:1fr}}
+
+/* builds */
+.builds{border-top:2px solid transparent;border-image:var(--grad) 1}
+.build{display:grid;grid-template-columns:16rem 1fr auto;gap:2rem;align-items:baseline;padding-block:1.6rem;border-bottom:1px solid var(--line)}
+.build>*{min-width:0}
+.build h3{font-size:1.25rem}
+.build p{color:var(--muted)}
+.metric{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:1;text-align:right}
+.metric small{display:block;font-family:var(--mono);font-size:.68rem;font-weight:400;color:var(--muted);letter-spacing:.06em;margin-top:.3rem;-webkit-text-fill-color:var(--muted)}
+@media (max-width:760px){.build{grid-template-columns:1fr;gap:.5rem}.metric{text-align:left}}
+
+.stack{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem}
+.stack span{font-family:var(--mono);font-size:.82rem;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.35rem .8rem}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;counter-reset:s}
+.steps li{counter-increment:s;padding-top:1rem;min-width:0;border-top:2px solid var(--line);position:relative}
+.steps li::after{content:"";position:absolute;top:-2px;left:0;width:2.5rem;height:2px;background:var(--grad)}
+.steps span{font-family:var(--display);font-weight:700;font-size:1.25rem;display:block;margin-bottom:.4rem}
+.steps span::before{content:counter(s,decimal-leading-zero);font-family:var(--mono);font-size:.75rem;color:var(--magenta);font-weight:500;margin-right:.5rem}
+.steps p{color:var(--muted);font-size:.95rem}
+@media (max-width:860px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+
+/* contact */
+.contact{position:relative;overflow:hidden;background:var(--surface-2);border:1px solid var(--line);border-radius:16px;padding:clamp(2rem,5vw,3.5rem);display:grid;grid-template-columns:1.3fr 1fr;gap:2.5rem;align-items:center}
+.contact::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad)}
+.contact>*{min-width:0}
+.contact h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:700}
+.contact p{color:var(--muted);margin-top:1rem;max-width:32rem}
+.channels{display:grid;gap:.75rem}
+.channel{display:flex;justify-content:space-between;align-items:center;gap:1rem;border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:.9rem 1rem;text-decoration:none}
+.channel span:first-child{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.channel span:last-child{font-weight:600;overflow-wrap:anywhere;text-align:right}
+a.channel:hover{border-color:var(--cyan)}
+@media (max-width:760px){.contact{grid-template-columns:1fr}}
+
+footer{padding-block:2.5rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+@media (prefers-reduced-motion:no-preference){
+  .banner img{animation:glow 6s ease-in-out infinite alternate}
+  @keyframes glow{from{box-shadow:0 30px 60px -30px rgba(108,92,255,.5)}to{box-shadow:0 30px 70px -26px rgba(216,75,242,.6)}}
+}
+
+.nav-end{display:flex;align-items:center;gap:.6rem}
+.lang select{appearance:none;-webkit-appearance:none;background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23A3ABD6' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right .7rem center;
+  color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:.55rem 1.9rem .55rem .9rem;font:500 .88rem var(--body);cursor:pointer}
+.lang select:hover{border-color:var(--cyan)}
+.lang select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.lang option{background:var(--surface);color:var(--ink)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+i[data-i]{font-style:normal}
+.metric small{text-transform:uppercase}
+:lang(ja),:lang(ja) h1,:lang(ja) h2,:lang(ja) h3{font-family:"IBM Plex Sans","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo","Noto Sans JP",sans-serif}
+:lang(ko),:lang(ko) h1,:lang(ko) h2,:lang(ko) h3{font-family:"IBM Plex Sans","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif}
+:lang(zh-Hans),:lang(zh-Hans) h1,:lang(zh-Hans) h2,:lang(zh-Hans) h3{font-family:"IBM Plex Sans","PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif}
+:lang(zh-Hant),:lang(yue),:lang(zh-Hant) h1,:lang(zh-Hant) h2,:lang(zh-Hant) h3,:lang(yue) h1,:lang(yue) h2,:lang(yue) h3{font-family:"IBM Plex Sans","PingFang TC","PingFang HK","Microsoft JhengHei","Noto Sans TC",sans-serif}
+:lang(th),:lang(th) h1,:lang(th) h2,:lang(th) h3{font-family:"IBM Plex Sans","Leelawadee UI","Thonburi","Noto Sans Thai",sans-serif;line-height:1.7}
+:lang(ja) h1,:lang(ko) h1,:lang(zh-Hans) h1,:lang(zh-Hant) h1,:lang(yue) h1,:lang(th) h1{font-weight:700;line-height:1.25;letter-spacing:0;font-size:clamp(1.9rem,3.6vw,2.9rem)}
+:lang(ja) h2,:lang(ko) h2,:lang(zh-Hans) h2,:lang(zh-Hant) h2,:lang(yue) h2,:lang(th) h2{line-height:1.3}
+:lang(ja) .eyebrow,:lang(ko) .eyebrow,:lang(zh-Hans) .eyebrow,:lang(zh-Hant) .eyebrow,:lang(yue) .eyebrow,:lang(th) .eyebrow{letter-spacing:.06em}
+@media (max-width:760px){.nav .btn{display:none}}
+
+.lang{position:relative}
+.lang summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:.45rem;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:.5rem .9rem;font:500 .88rem var(--body);white-space:nowrap}
+.lang summary::-webkit-details-marker{display:none}
+.lang summary::after{content:"";width:.4rem;height:.4rem;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(45deg) translateY(-2px)}
+.lang summary:hover,.lang[open] summary{border-color:var(--cyan)}
+.lang ul{position:absolute;right:0;top:calc(100% + .4rem);margin:0;padding:.35rem;list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:12px;min-width:11rem;box-shadow:0 20px 40px -20px rgba(0,0,0,.7);display:grid;gap:1px;z-index:20}
+.lang li a{display:block;padding:.45rem .7rem;border-radius:8px;text-decoration:none;color:var(--muted);font-size:.92rem}
+.lang li a:hover{background:var(--surface-2);color:var(--ink)}
+.lang li a[aria-current]{color:var(--ink);background:var(--surface-2)}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AAI:SSCG-3", "url": "https://aaisscg3.com/", "logo": "https://aaisscg3.com/banner.jpg", "email": "chay@aaisscg3.com", "founder": {"@type": "Person", "name": "Chaitanya Chauhan", "sameAs": "https://www.linkedin.com/in/chaychauhan/"}, "sameAs": ["https://www.linkedin.com/company/aaisscg3"], "areaServed": ["Asia-Pacific", "Worldwide"], "description": "We design and deploy multi-agent systems, retrieval (RAG) pipelines and AI automation for organisations where accuracy and auditability are not optional."}</script>
+</head>
+<body>
+<header class="top">
+<div class="wrap nav">
+<a aria-label="AAI:SSCG-3 home" class="brand" href="../index.html">
+<img alt="" height="40" src="../bulb.png" width="29"/>
+<span>AAI<span class="c">:</span><span class="grad">SSCG-3</span></span>
+</a>
+<ul>
+<li><a href="#sectors">Chúng tôi hỗ trợ ở đâu</a></li>
+<li><a href="#build">Chúng tôi xây dựng những gì</a></li>
+<li><a href="#how">Cách thức làm việc của chúng tôi</a></li>
+<li><a href="#contact">Hợp tác với chúng tôi</a></li>
+</ul>
+<div class="nav-end">
+<details class="lang"><summary aria-label="Language">Tiếng Việt</summary><ul><li><a href="../index.html" hreflang="en" lang="en">English</a></li><li><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/index.html" hreflang="ko" lang="ko">한국어</a></li><li><a href="../zh-hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li><li><a href="../zh-hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li><li><a href="../yue/index.html" hreflang="yue" lang="yue">粵語</a></li><li><a href="../th/index.html" hreflang="th" lang="th">ไทย</a></li><li><a aria-current="page" href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a></li><li><a href="../fil/index.html" hreflang="fil" lang="fil">Filipino</a></li><li><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a></li><li><a href="../fr/index.html" hreflang="fr" lang="fr">Français</a></li></ul></details>
+<a class="btn" href="#contact">Hãy cùng trao đổi</a>
+</div>
+</div>
+</header>
+<main id="top">
+<div class="wrap banner">
+<img alt="AAI:SSCG-3 Agentic Systems logo: a glowing lightbulb with a brain inside" height="595" src="../banner.jpg" width="1600"/>
+</div>
+<div class="wrap hero">
+<div>
+<p class="eyebrow">AI tác nhân (Agentic AI) · Mở rộng khắp khu vực Châu Á - Thái Bình Dương (APAC)</p>
+<h1>AI tác nhân thực hiện công việc thực tế và minh bạch nguồn dữ liệu.</h1>
+<p class="lede">Chúng tôi thiết kế và triển khai các hệ thống đa tác nhân (multi-agent systems), quy trình truy xuất dữ liệu (RAG) và tự động hóa bằng AI cho các tổ chức đòi hỏi độ chính xác cao và khả năng kiểm chứng.</p>
+<div class="cta-row">
+<a class="btn" href="#contact">Bắt đầu cuộc trò chuyện</a>
+<a class="btn ghost" href="#build">Khám phá các giải pháp chúng tôi xây dựng</a>
+</div>
+<div aria-label="Region focus" class="region">
+<span>Singapore</span><span>Hồng Kông</span><span>Nhật Bản</span><span>Hàn Quốc</span><span>Đông Nam Á</span>
+</div>
+<p class="based">Có trụ sở tại Vương quốc Anh, làm việc với khách hàng trên toàn thế giới.</p>
+</div>
+<figure aria-label="Example of a traceable agent answer" class="trace">
+<div class="trace-head"><span><span class="dot"></span>claims-triage-agent</span><span>Ví dụ về kết quả đầu ra</span></div>
+<div class="trace-body">
+<p class="q">Hợp đồng bảo hiểm này có chi trả cho thiệt hại do nước gây ra từ đường ống bị vỡ không?</p>
+<p>Có, nếu sự cố rò rỉ nước xảy ra đột ngột và ngoài ý muốn. Các trường hợp rò rỉ dần dần sẽ không được bảo hiểm; ngoài ra, mức khấu trừ (excess) là 350 bảng Anh áp dụng cho các yêu cầu bồi thường liên quan đến sự cố rò rỉ nước.<span class="cite">S1</span><span class="cite">S2</span><span class="cite">S3</span></p>
+<div class="srcs">
+<span><b>S1</b><i>Nội dung hợp đồng §4.2 · Sự cố rò rỉ nước</i></span>
+<span><b>S2</b><i>Nội dung hợp đồng §7.1 · Các trường hợp loại trừ chung</i></span>
+<span><b>S3</b><i>Phụ lục trang 2 · Các mức khấu trừ</i></span>
+</div>
+</div>
+<div class="trace-foot"><span><i>Độ trung thực</i> <strong>0.97</strong></span><span><i>Nguồn dữ liệu</i> <strong>3/3 thông tin đã được xác minh</strong></span><span><i>Trạng thái</i> <strong>Quy trình: tiêu chuẩn</strong></span></div>
+</figure>
+</div>
+<div class="principles">
+<div class="wrap">
+<div class="principle"><h3>Có thể truy xuất nguồn gốc</h3><p>Mọi câu trả lời đều được liên kết ngược lại với tài liệu, trang hoặc hồ sơ gốc.</p></div>
+<div class="principle"><h3>Kiểm thử trước khi vận hành thực tế</h3><p>Mọi hệ thống đều được thử nghiệm và đánh giá kỹ lưỡng trước khi đưa vào sử dụng thực tế, thay vì đợi đến khi xảy ra lỗi mới khắc phục.</p></div>
+<div class="principle"><h3>Tuân thủ quy định</h3><p>Chi phí, độ chính xác và khả năng kiểm chứng luôn là ưu tiên hàng đầu trong mọi giải pháp chúng tôi xây dựng.</p></div>
+</div>
+</div>
+<section class="block" id="sectors">
+<div class="wrap">
+<div class="sec-head">
+<div><p class="eyebrow">Chúng tôi hỗ trợ ở đâu</p><h2>Bốn lĩnh vực mà bằng chứng là yếu tố then chốt</h2></div>
+<p>Chúng tôi hoạt động trong các lĩnh vực mà một câu trả lời sai có thể gây ra hậu quả; vì vậy, mọi kết quả đầu ra đều có thể được kiểm tra lại bởi những người chịu trách nhiệm.</p>
+</div>
+<div class="sectors">
+<article class="sector">
+<h3>Bảo hiểm &amp; Tài chính</h3>
+<ul><li>Phân loại yêu cầu bồi thường</li><li>Hỏi đáp về điều khoản bảo hiểm và hợp đồng</li><li>Theo dõi đối thủ cạnh tranh</li><li>Thẩm định chuyên sâu (due diligence) và nghiên cứu quy định pháp lý</li></ul>
+</article>
+<article class="sector">
+<h3>Dược phẩm &amp; Y tế</h3>
+<ul><li>Tra cứu các đề cương thử nghiệm và hướng dẫn lâm sàng</li><li>Theo dõi lộ trình phát triển sản phẩm (pipeline) và các quy định pháp lý</li></ul>
+<p class="guard">Mọi kết quả đầu ra đều được kiểm duyệt bởi chuyên gia có chuyên môn.</p>
+</article>
+<article class="sector">
+<h3>Chính phủ &amp; Quốc phòng</h3>
+<ul><li>Phân tích văn bản pháp luật và quy trình mua sắm công</li><li>Thu thập thông tin từ các nguồn mở (OSINT)</li><li>Đánh giá chính sách</li></ul>
+<p class="guard">Mọi khuyến nghị đều đi kèm bằng chứng xác thực.</p>
+</article>
+<article class="sector">
+<h3>Môi trường &amp; Phát triển bền vững</h3>
+<ul><li>Giám sát dữ liệu về khí thải và các sự cố</li><li>Phân tích các báo cáo đánh giá tác động dài</li><li>Lập kế hoạch và dự toán chi phí cho các sáng kiến</li></ul>
+</article>
+</div>
+</div>
+</section>
+<section class="block" id="build" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head">
+<div><p class="eyebrow">Chúng tôi xây dựng những gì</p><h2>Các hệ thống vận hành ổn định trong môi trường thực tế</h2></div>
+<p>Được đóng gói (containerized), đánh giá kỹ lưỡng và kết nối với dữ liệu riêng của bạn, với quy trình kiểm toán (audit trail) được tích hợp ngay từ đầu.</p>
+</div>
+<div class="builds">
+<div class="build"><h3>Các nhóm tác nhân AI (multi-agent teams)</h3><p>Các tác nhân AI phối hợp nghiên cứu, phân tích và lập kế hoạch; mọi thông tin đưa ra đều được gắn kèm nguồn gốc cụ thể.</p><span></span></div>
+<div class="build"><h3>Hệ thống RAG (Retrieval-Augmented Generation)</h3><p>Trả lời câu hỏi dựa trên các tập tài liệu lớn, với mỗi câu trả lời đều có căn cứ từ văn bản gốc.</p><div class="metric grad">97%<small>Độ trung thực với nguồn dữ liệu gốc</small></div></div>
+<div class="build"><h3>Các máy chủ công cụ MCP (Model Context Protocol)</h3><p>Kết nối an toàn các tác nhân AI với dữ liệu và hệ thống nội bộ của tổ chức; giải pháp được đóng gói và sẵn sàng đưa vào vận hành thực tế.</p><span></span></div>
+<div class="build"><h3>Các tác nhân AI chuyên phân loại khối lượng lớn yêu cầu</h3><p>Sắp xếp và xếp hạng các yêu cầu gửi đến, giúp ưu tiên xử lý những vấn đề khẩn cấp trước.</p><span></span></div>
+</div>
+<div aria-label="Technology stack" class="stack">
+<span>LangGraph</span><span>LangChain</span><span>CrewAI</span><span>AutoGen</span><span>MCP / FastMCP</span><span>Azure OpenAI</span><span>Python</span><span>Docker</span><span>n8n</span><span>RAGAS evaluation</span>
+</div>
+</div>
+</section>
+<section class="block" id="how" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head">
+<div><p class="eyebrow">Cách thức làm việc của chúng tôi</p><h2>Từ vấn đề thực tế đến hệ thống có thể kiểm toán được</h2></div>
+<p>Dẫn dắt bởi Chaitanya Chauhan, Kỹ sư hệ thống tác nhân AI (Agentic Engineer) – người trực tiếp thiết kế, triển khai các hệ thống và phụ trách chiến lược thâm nhập thị trường tại khu vực Châu Á - Thái Bình Dương (APAC).</p>
+</div>
+<ol class="steps">
+<li><span>Xác định phạm vi</span><p>Chúng tôi bắt đầu từ vấn đề vận hành thực tế của bạn (thay vì tập trung vào công nghệ) và thống nhất tiêu chuẩn cho một kết quả tối ưu.</p></li>
+<li><span>Xây dựng</span><p>Phát triển các hệ thống đa tác nhân (multi-agent systems), quy trình RAG và tự động hóa thông qua các công cụ như LangGraph, CrewAI, AutoGen và MCP.</p></li>
+<li><span>Đánh giá</span><p>Chúng tôi đo lường độ trung thực, độ chính xác và chi phí trước khi triển khai, đảm bảo mọi kết quả đầu ra đều có thể truy xuất nguồn gốc.</p></li>
+<li><span>Kết nối</span><p>Các máy chủ công cụ MCP kết nối an toàn các tác nhân (agent) với dữ liệu và hệ thống của bạn, được đóng gói trong các container Docker.</p></li>
+</ol>
+</div>
+</section>
+<section class="block" id="contact" style="padding-top:0">
+<div class="wrap">
+<div class="contact">
+<div>
+<p class="eyebrow">Hợp tác với chúng tôi</p>
+<h2>Xây dựng những quan hệ đối tác đầu tiên tại khu vực Châu Á - Thái Bình Dương (APAC)</h2>
+<p>Nếu bạn đang tìm hiểu về AI tác nhân (agentic AI) tại khu vực này, hoặc đang hợp tác với các tổ chức như vậy, hãy cùng trao đổi.</p>
+</div>
+<div class="channels">
+<a class="channel" href="mailto:chay@aaisscg3.com"><span>Email</span><span>chay@aaisscg3.com</span></a>
+<a class="channel" href="https://www.linkedin.com/in/chaychauhan/" rel="noopener" target="_blank"><span>Người sáng lập</span><span>Chaitanya Chauhan</span></a>
+<a class="channel" href="https://www.linkedin.com/company/aaisscg3" rel="noopener" target="_blank"><span>Công ty</span><span>AAI:SSCG-3 · LinkedIn</span></a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<span>© 2026 AAI:SSCG-3 · Agentic Systems</span>
+<span>AI tác nhân cho các ngành được quản lý chặt chẽ · Khu vực Châu Á - Thái Bình Dương (APAC)</span>
+</div>
+</footer>
+<script>document.addEventListener("click",function(e){var d=document.querySelector(".lang");if(d&&d.open&&!d.contains(e.target))d.open=false});</script>
+</body>
+</html>
